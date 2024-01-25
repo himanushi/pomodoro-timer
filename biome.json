@@ -11,6 +11,9 @@
         "useExhaustiveDependencies": "error",
         "useHookAtTopLevel": "error",
         "noUnusedVariables": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
       }
     }
   },

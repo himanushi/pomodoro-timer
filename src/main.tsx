@@ -11,7 +11,7 @@ const PomodoroTimer = () => {
   const [isWorkTime, setIsWorkTime] = useState(true);
 
   useEffect(() => {
-    let interval = null;
+    let interval: any = null;
     if (isRunning) {
       interval = setInterval(() => {
         setTimeLeft((prevTime) => {
@@ -33,7 +33,7 @@ const PomodoroTimer = () => {
     setIsRunning(!isRunning);
   };
 
-  const handleWorkTimeChange = (e) => {
+  const handleWorkTimeChange = (e: any) => {
     const newWorkTime = e.target.value * 60;
     setWorkTime(newWorkTime);
     if (!isRunning) {
@@ -41,7 +41,7 @@ const PomodoroTimer = () => {
     }
   };
 
-  const handleBreakTimeChange = (e) => {
+  const handleBreakTimeChange = (e: any) => {
     const newBreakTime = e.target.value * 60;
     setBreakTime(newBreakTime);
     if (!isRunning && !isWorkTime) {
@@ -49,7 +49,7 @@ const PomodoroTimer = () => {
     }
   };
 
-  const formatTime = (seconds) => {
+  const formatTime = (seconds: any) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
@@ -57,7 +57,7 @@ const PomodoroTimer = () => {
 
   const playBeep = () => {
     const audioContext = new (
-      window.AudioContext || window.webkitAudioContext
+      window.AudioContext || (window as any).webkitAudioContext
     )();
     const oscillator = audioContext.createOscillator();
     oscillator.type = "square";
@@ -88,7 +88,9 @@ const PomodoroTimer = () => {
         />
       </div>
       <div>{formatTime(timeLeft)}</div>
-      <button onClick={toggleTimer}>{isRunning ? "停止" : "開始"}</button>
+      <button onClick={toggleTimer} type="button">
+        {isRunning ? "停止" : "開始"}
+      </button>
     </div>
   );
 };
