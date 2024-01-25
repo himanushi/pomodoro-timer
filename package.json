@@ -11,9 +11,9 @@
     "update": "ncu -u"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.5.2",
+    "@biomejs/biome": "^1.5.3",
     "@preact/signals": "^1.2.2",
-    "@types/node": "^20.11.5",
+    "@types/node": "^20.11.6",
     "clipboardy": "^4.0.0",
     "http-server": "^14.1.1",
     "npm-check-updates": "^16.14.12",
