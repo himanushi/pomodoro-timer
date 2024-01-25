@@ -1,0 +1,22 @@
+@import url("https://unpkg.com/open-props@1.6.16/open-props.min.css");
+@import url("https://unpkg.com/open-props@1.6.16/normalize.min.css");
+
+a {
+  color: var(--blue-5);
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited {
+    color: var(--purple-5);
+  }
+}
+
+button {
+  border: none;
+  background-color: var(--red-5);
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

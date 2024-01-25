@@ -1,0 +1,28 @@
+{
+  "name": "template-preact",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "ai": "node ./scripts/copyFiles.js",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "pre": "vite build && npx http-server ./dist",
+    "update": "ncu -u"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.2",
+    "@preact/signals": "^1.2.2",
+    "@types/node": "^20.11.5",
+    "clipboardy": "^4.0.0",
+    "http-server": "^14.1.1",
+    "npm-check-updates": "^16.14.12",
+    "preact": "^10.19.3",
+    "preact-router": "^4.1.2",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-external-cdn": "^1.0.1",
+    "vite-tsconfig-paths": "^4.3.1"
+  }
+}

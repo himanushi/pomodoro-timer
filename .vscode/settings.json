@@ -1,0 +1,21 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*$",
+        "cmd": "npx @biomejs/biome check --apply ${file}"
+      },
+      {
+        "match": "\\.json$|\\.css$|\\.html$|\\.md$",
+        "cmd": "npx prettier --write ${file}"
+      }
+    ]
+  },
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.tsx": "$(capture).module.css,$(capture).css"
+  },
+
+  "cSpell.words": ["clipboardy", "preact"]
+}
